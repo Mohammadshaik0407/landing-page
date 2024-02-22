@@ -1,0 +1,453 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background: #eee;
+    transition: background-color 0.3s ease;
+}
+:root{
+
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+    --blue:#0000FF;
+    --red:#fff;
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    background-size: 100%;
+    
+}
+
+
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius:.5rem;
+    border:.2rem solid var(--black);
+    color:var(--black);
+    cursor: pointer;
+    background: none;
+    position: relative;
+    overflow: hidden;
+    transition: 0.8s;
+}
+
+.btn:hover{
+    
+    color: #fff;
+    background:#ddbc8f;
+}
+
+
+
+.header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+
+}
+
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color:var(--black);
+}
+
+.header .navbar a:hover{
+    color:blue;
+}
+
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background:#ddbc8f;
+    color: #fff;
+}
+.header .search-form{
+    position: absolute;
+    top:110%; right:110%;
+    width: 50rem;
+    height:5rem;
+    background: #fff;
+    border-radius: .5rem;
+
+    display: flex;
+    align-items: center;
+    box-shadow:var(--box-shadow);
+}
+
+.header .search-form{
+    position: absolute;
+    top:110%; right:110%;
+    width: 50rem;
+    height:5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow:var(--box-shadow);
+}
+
+
+
+.header .search-form.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input{
+    height:100%;
+    width:100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color:var(--black);
+    padding:0 1.5rem;
+    
+}
+
+.header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color:var(--black);
+    cursor:pointer;
+}
+
+.header .search-form label:hover{
+    color:#000;
+}
+
+.header .login-form{
+    position: absolute;
+    top:110%; right:-110%;
+    width:30rem;
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    border-radius: .5rem;
+    background: #fff;
+    text-align: center;
+}
+
+.header .login-form.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:var(--black);
+
+}
+
+.header .login-form .box{
+    width: 80%;
+    margin:.7rem;
+    background:#eee;
+    border-radius: .5rem;
+    padding:1rem;
+    font-size:1.6rem;
+    color:var(--black);
+    text-transform: none;
+}
+
+.header .login-form p{
+    font-size: 1.4rem;
+    padding:.5rem 0;
+    color:var(--light-color);
+}
+
+.header .login-form p a{
+    color:var(--black);
+    text-decoration: underline;
+}
+
+.header .shopping-cart{
+    position: absolute;
+    top: 110%; right: -110%;
+    padding:1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width:30rem;
+    background: #fff;
+
+}
+
+.header .shopping-cart.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+    margin:1rem 0;
+}
+
+.header .shopping-cart .box img{
+    height:10rem;
+}
+
+.header .shopping-cart .box .fa-trash{
+    font-size: 40px;
+    position: absolute;
+    top:50%; right:2rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translateY(-50%);
+}
+
+.header .shopping-cart .box .fa-trash:hover{
+    color:var(--green);
+}
+
+.header .shopping-cart .box .content h3{
+    color:var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+
+}
+
+.header .shopping-cart .box .content span{
+    color:var(--light-color);
+    font-size: 1.6rem;
+}
+
+.header .shopping-cart .box .content .quantity{
+    padding-left: 1rem;
+
+}
+
+.header .shopping-cart .box .total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color:var(--black);
+}
+
+.header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+    margin:1rem;
+}
+
+.button{
+    align-items: center;
+}
+
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    margin: 10px;
+    height: 450px;
+    width: 100%;
+    background-color: #fff;
+    font-size: 17px;
+}
+
+.product {
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 40px;
+}
+.product:hover{
+    transform:translateY(-10px) ;
+    border-color: #130f40;
+    border:solid ;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+}
+.product img:hover{
+    transform: scale(1.2);
+}
+.product i svg{
+    stroke: red;
+    fill: red;
+}
+
+button{
+    background: none;
+    border: 2px solid #000; 
+    font-family: "montserrat",sans-serif;
+    text-transform: uppercase;
+    padding:5px ;
+    min-width: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+ }
+ button:hover{
+     color: #000;
+     box-shadow: #0000FF;
+ }
+ button::before{
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background:#ddbc8f;
+     z-index: -1;
+     transition: transform 0.5s;
+     transform-origin: 0 0;
+     transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+ }
+ button::before{
+     transform: scaleX(0);
+ }
+ button:hover::before{
+     transform: scaleX(1);
+ }
+
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #fff;
+    background-color:#909497;
+    display: flex;
+    
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+
+    
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.footer .language-btn{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+ .navbar a {
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+ .navbar a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background:#000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.navbar a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+.b{
+    margin-top:-1110 px;
+}
+.int:hover{
+    color: #0000FF;
+}
+
+.logo img{
+    border-radius: 10px;
+    border-color: #000;
+    float: left;
+}
+#buyNowButton {
+    display: none;
+}
+.loader {
+    position: fixed;
+width: 100%;
+height: 100vh;
+background: #fff url(https://loading.io/mod/spinner/rolling/thumb.png);
+z-index: 100;
+}
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;  
+}
